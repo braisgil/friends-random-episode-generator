@@ -6,7 +6,7 @@ class Imdb {
     }
 
     async fetchIMDBinfo() {
-        const apiUrl = `http://www.omdbapi.com/?apikey=${this.apiKey}&t=friends&season=${this.season}&episode=${this.episode}`;
+        const apiUrl = `https://www.omdbapi.com/?apikey=${this.apiKey}&t=friends&season=${this.season}&episode=${this.episode}`;
         const apiRequest = await fetch(apiUrl);
 
         if (apiRequest.ok) {
