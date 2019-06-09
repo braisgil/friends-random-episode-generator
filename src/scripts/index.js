@@ -3,7 +3,8 @@ import '../styles/index.scss';
 //JSON API Import
 import { apiKey } from "../../imdb.config.json";
 //JS Imports
-import './js/imdb.js';
+import './js/smoothScroll.polyfill.js';
+
 import { seasons } from './js/episodesArrayGenerator.js';
 import { randomGen } from './js/randomEpisodePicker.js';
 import Imdb from './js/imdb.js';
@@ -31,5 +32,13 @@ function episodeRandomizer() {
         optBtn.classList.add('info-wrapper__option-container--active');
     });
 
-    
+    if ('scrollBehavior' in document.documentElement.style) {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    } else {
+        smoothScrollTo(0, 0, 500);
+    }
 }
