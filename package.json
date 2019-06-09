@@ -1,5 +1,5 @@
 {
-  "name": "Friends Random Episode Generator",
+  "name": "friends-random-episode-generator",
   "version": "1.0.0",
   "description": "Friends Random Episode Generator using JS Vanilla (ES6) and omdB API ",
   "scripts": {
