@@ -24,7 +24,7 @@ module.exports = merge(common, {
     }),
     new CopyPlugin([
       {
-        from: 'src/images/*.png',
+        from: 'src/images/*',
         to: './'
       },
     ]),
